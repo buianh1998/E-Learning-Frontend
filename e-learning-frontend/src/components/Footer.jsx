@@ -59,7 +59,7 @@ export default function Footer() {
               style={{ width: 60 }}
             />
             <p>
-              <i className="fas fa-home mr-3" /> HCM, NY 10012, US
+              <i className="fas fa-home mr-3" /> HCM, VN
             </p>
             <p>
               <i className="fas fa-envelope mr-3" /> buitheanh1798@gmail.com
