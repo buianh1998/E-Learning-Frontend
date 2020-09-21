@@ -9,7 +9,7 @@ export function actionSubject(type, data) {
   };
 }
 
-export function getSubject() {
+export function getListSubject() {
   return async (dispatch) => {
     try {
       let subject = await getManySubject();
