@@ -24,15 +24,15 @@ export function useDetail(idCourse) {
 
   return detailCourse;
 }
-export function usePaginationCourse() {
-  const listCourse = useSelector((state) => state.CourseReducer.listCourse);
-  const total = useSelector((state) => state.CourseReducer.total);
-  const dispatch = useDispatch();
-  // using useState for check header and pagination
-  const [filters, setFilters] = useState({ limit: 8, offset: 0 });
-  useEffect(() => {
-    const parseString = queryString.stringify(filters);
-    dispatch(getListCourse(parseString));
-  }, [filters]);
-  return { listCourse, total, filters };
-}
+// export function usePaginationCourse() {
+//   const listCourse = useSelector((state) => state.CourseReducer.listCourse);
+//   const total = useSelector((state) => state.CourseReducer.total);
+//   const dispatch = useDispatch();
+//   // using useState for check header and pagination
+//   const [filters, setFilters] = useState({ limit: 8, offset: 0 });
+//   useEffect(() => {
+//     const parseString = queryString.stringify(filters);
+//     dispatch(getListCourse(parseString));
+//   }, [filters]);
+//   return { listCourse, total, filters };
+// }
