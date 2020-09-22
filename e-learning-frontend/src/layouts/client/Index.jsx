@@ -10,17 +10,27 @@ import {
 import Header from "../../components/Header";
 import Course from "../../pages/client/Course/Course";
 import Detail from "../../pages/client/Detail/Detail";
+import Footer from "../../components/Footer";
 export default function ClientPage() {
   const match = useRouteMatch();
+  console.log(`${match.url}course`);
   return (
     <div>
-      {/* <Header></Header> */}
-      <Switch>
-        <Route path={match.url} exact component={Home}></Route>
-        <Route path="/course" component={Course}></Route>
-        <Route path="/detail/:id" component={Detail}></Route>
-        <Redirect to="/" from="/"></Redirect>
-      </Switch>
+      <BrowserRouter>
+        <Header></Header>
+        <Switch>
+          <Route path={`${match.url}course`} exact component={Course}></Route>
+          <Route
+            path={`${match.url}course/:id`}
+            exact
+            component={Detail}
+          ></Route>
+          <Route path={`${match.url}`} exact component={Home}></Route>
+
+          <Redirect to="/"></Redirect>
+        </Switch>
+        <Footer></Footer>
+      </BrowserRouter>
     </div>
   );
 }
